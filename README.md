@@ -16,3 +16,5 @@ Clone the respository, change directory over to /blog
 `sh gradlew bootRun`
 or
 `./gradlew bootRun`
+
+Runs on localhost:8080 for right now
