@@ -1,10 +1,7 @@
 package com.kroberts.blog
 
 import java.time.LocalDateTime
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
-import javax.persistence.ManyToOne
+import javax.persistence.*
 
 @Entity
 class Article(
@@ -22,4 +19,11 @@ class User(
     var firstname: String,
     var lastname: String,
     var description: String? = null,
+    @Id @GeneratedValue var id: Long? = null)
+
+@Entity
+@Table(name = "client")
+class Client (
+    var name: String,
+    var email: String,
     @Id @GeneratedValue var id: Long? = null)

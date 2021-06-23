@@ -3,7 +3,7 @@
 #### How to run ####
 
 Make sure you have Java installed.
-You can use sdkman, just make the Java install easy on youself.
+You can use sdkman, just make the Java install easy on yourself.
 
 Follow directions here to get sdkman:
 https://sdkman.io/
@@ -17,4 +17,4 @@ Clone the respository, change directory over to /blog
 or
 `./gradlew bootRun`
 
-Runs on localhost:8080 for right now
+Blog server runs on port 8080 locally

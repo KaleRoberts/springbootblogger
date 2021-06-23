@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration
 @Configuration
 class BlogConfiguration {
     @Bean
-    fun databaseInitializer(userRepository: UserRepository, articleRepository: ArticleRepository) =
+    fun databaseInitializer(userRepository: UserRepository, articleRepository: ArticleRepository, clientRepository: ClientRepository) =
         ApplicationRunner {
             val kroberts = userRepository.save(User("kroberts", "Kale", "Roberts"))
                 articleRepository.save(
@@ -23,5 +23,6 @@ class BlogConfiguration {
                     content = "Some cool stuff about JavaScript",
                     author = kroberts
                 ))
+            clientRepository.save(Client("Kale", "Roberts", 117))
         }
 }

@@ -31,3 +31,15 @@ class UserController(private val repository: UserRepository) {
     fun findOne(@PathVariable login: String) =
         repository.findByLogin(login) ?: throw ResponseStatusException(HttpStatus.NOT_FOUND, "This user does not exist")
 }
+
+@RestController
+@RequestMapping("/api/clients")
+class ClientController(private val repository: ClientRepository) {
+
+    @GetMapping("/")
+    fun findAll() = repository.findAll()
+
+    @GetMapping("/{id}")
+    fun findOne(@PathVariable id: Long) =
+        repository.findById(id) ?: throw ResponseStatusException(HttpStatus.NOT_FOUND, "This client does not exist")
+}
